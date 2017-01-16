@@ -1,0 +1,54 @@
+.full{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.core,
+.middle,
+.middle .info{
+  position: absolute;
+  left:50%;
+  transform: translate(-50%,0%);
+}
+.core{
+  top:100px;
+  width: 80%;
+  left:50%;
+  padding: 5px;
+  background-color: #d0dee5;
+  z-index: 10;
+}
+.middle{
+  min-height: 100%;
+  width: 100%;
+  background-image: url("https://68.media.tumblr.com/3f5cf9c199b2cd4aa28abd38949064ed/tumblr_ojr45l5ttg1vgcx0qo1_540.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  background-size: cover;
+}
+.middle .info{
+  top:45%;
+  transform: translate(-50%,0%);
+  width: 75%;
+}
+.middle .info .temp{
+  margin-top: 20px;
+}
+.footer{
+  position:fixed;
+  height: 30%;
+  bottom:0;
+  width:100vw;
+  padding:10px;
+  margin:0;
+  background-color: #d0dee5;
+  transform: translate(0%,50%);
+}
+.footer .info,
+.footer .sub{
+  display: none;
+}
