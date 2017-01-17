@@ -13,7 +13,8 @@ function getData(latitude, longitude){
   var weather_api = 'http://api.openweathermap.org/data/2.5/weather?lat='+ latitude + '&lon=' + longitude + '&APPID=cef2fd0fe26ca6833897375d5bf797cc';
 
   $.getJSON(weather_api, function(data){
-    //tests
+
+    //tests  ****
     // alert("just a test");
     // $("#screen-div").html(JSON.stringify(data));
 
@@ -41,7 +42,7 @@ function getData(latitude, longitude){
       }
     });
 
-    // //toggle tempreature
+    // //toggle tempreature   *** this test???
     // $("#tswitch").on('click',function(){
     //   if ( this.html().toLowerCase() === 'Farenheit'){
     //     $("#tempreature").html(getFarenheit(weather_temp));
@@ -51,21 +52,18 @@ function getData(latitude, longitude){
     //     this.html("Farenheit");
     //   }
     // });
-
   });
 }
 
 //get the users location
 function getLocation(){
-  var latitude, longitude;
   var location_api = "http://ip-api.com/json";
   $.getJSON(location_api, function(json){
-    // alert("test log");
-    // alert(latitude , longitude);
-    latitude = json.lat;
-    longitude = json.lon;
-    getData( latitude, longitude );
+    getData( json.lat, json.lon );
   });
+
+  //pivoted from using HTML5 geolocator ***
+
   // if (navigator.geolocation){
   //   navigator.geolocation.getCurrentPosition(function(position){
   //     // console.log(position.coords.latitude);
